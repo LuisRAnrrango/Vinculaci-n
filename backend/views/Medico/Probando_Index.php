@@ -18,7 +18,7 @@ use yii\widgets\Pjax;
 
 
           <h1>Los Medicos de esta Institución son muy capacitados</h1>
-          <h2>mas Información</h2>
+          <h2>Más Información .</h2>
           <a href="http://localhost:81/final/backend/web/index.php?r=citas%2Findex"><button class="btn-danger">Regresar</button></a>
 
 <?php
