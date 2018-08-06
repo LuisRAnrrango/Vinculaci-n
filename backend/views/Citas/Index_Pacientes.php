@@ -28,8 +28,42 @@ $this->params['breadcrumbs'][] = $this->title;
 //if ($model->NOMBREESPECIALIDAD=='Cardiología') {
     Pjax::begin(); 
   ?>
+   <div class="container" style="background-color: #F5B7B1">
+  <!-- Content here -->
+  <div class="container-fluid">
+ 
+      <table>
+          <td>
+          <tr>
+          <h2>ADVERTENCIA:</h2>    
+          </tr>
+            <br/>
+          <tr>
+          <h4>Para continuar con la reserva de sus citas médicas tomar en cuenta que: </h4>   
+          </tr>
+        
+          <tr>
+          <h4> Elija las siguientes opciones segun número de Especialidad  </h4>
+          </tr>
+          <br/>
+            <tr>
+            <h5> 1 :Odontología  </h5>
+           
+            <h5> 2 : Medicina General </h5>
+          
+            <h5> 4 Fisioterapia :  </h5>
+         
+            <h5> 5 Oftalmología:  </h5>
+            <br/>
+          </tr>
+          </td>
+      </table>
+      
+</div>
+</div>
+    <?php
     
-    
+  ?>
     
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -53,7 +87,23 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => 'yii\grid\ActionColumn',
               
-            'template'=>'{update}'
+            'template'=>'{update}',
+                      'buttons' => [
+                        'update' => function($url, $model) {
+                if($model -> ESTADO_CITA !=='DISPONIBLE'){
+                    return Html ::a(
+                                            '</span> <span class="glyphicon glyphicon-minus-sign"></span>',
+                                            $url, [
+                                        'title' => 'Cita Reservada',
+                            ]);
+                }
+                            return Html ::a(
+                                            '<span class="glyphicon">Reservar </span> <span class="glyphicon glyphicon-check"></span>',
+                                            $url, [
+                                        'title' => 'Reservar Cita',
+                            ]);
+                        }
+                    ]
                 ],
         ],
     ]); ?>

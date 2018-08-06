@@ -22,10 +22,24 @@ use yii\widgets\ActiveForm;
     ArrayHelper::map(Catespecialidad::find()->all(), 'IDESPECIALIDAD', 'NOMBREESPECIALIDAD'),
             ['promt'=>'Select ESPECIALIDAD']) ?>
 
-      <?= $form->field($model, 'FECHACITA')->textInput() ?>
+     <?=
+		$form-> field($model, 'FECHACREACION')->widget(\yii\jui\DatePicker::classname(),[
+		'dateFormat' => 'yyyy/dd/MM',
+		'value' => date('d/m/Y'),
+		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
+		])
+		?>
+
+     <?=
+		$form-> field($model, 'FECHACITA')->widget(\yii\jui\DatePicker::classname(),[
+		'dateFormat' => 'yyyy/dd/MM',
+		'value' => date('d/m/Y'),
+		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
+		])
+		?>
         <?= $form->field($model, 'HORA')->textInput() ?>
 
-         <?= $form->field($model, 'ESTADO_CITA')->dropDownList(['DI'=>'DI']) ?>
+         <?= $form->field($model, 'ESTADO_CITA')->dropDownList(['DISPONIBLE'=>'DISPONIBLE']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

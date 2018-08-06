@@ -35,14 +35,31 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
+  if(Yii::$app->user->can('Index-medico')){
+      $menuItems = [
         ['label' => 'Menu Principal', 'url' => ['site/index']],
-        ['label' => 'Citas', 'url' => ['/citas/index']],
+        ['label' => 'Agendar Citas', 'url' => ['/citas/index']],
         ['label' => 'Medico', 'url' => ['/medico/index']],
         ['label' => 'Especialidad', 'url' => ['/catespecialidad/index']],
-        ['label' => 'Registrarse', 'url' => ['/site/logout']],
-        
+        ['label' => 'Registrarse', 'url' => ['/site/logout']],      
     ];
+  }
+      else if(Yii::$app->user->can('Index-citas')){
+          $menuItems = [
+        ['label' => 'Menu Principal', 'url' => ['site/index']],
+        ['label' => 'Agendar Citas', 'url' => ['/citas/index']],
+            
+    ];
+      }
+      
+  else{
+      $menuItems = [
+        ['label' => 'Menu Principal', 'url' => ['site/index']],
+        ['label' => 'Agendar Citas', 'url' => ['/citas/index']],
+    ];
+  }
+         
+    
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {

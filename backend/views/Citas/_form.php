@@ -14,9 +14,21 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'IDESPECIALIDAD')->textInput() ?>
 
-    <?= $form->field($model, 'FECHACREACION')->textInput() ?>
+    <?=
+		$form-> field($model, 'FECHACREACION')->widget(\yii\jui\DatePicker::classname(),[
+		'dateFormat' => 'yyyy/dd/MM',
+		'value' => date('d/m/Y'),
+		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
+		])
+		?>
 
-    <?= $form->field($model, 'FECHACITA')->textInput() ?>
+     <?=
+		$form-> field($model, 'FECHACITA')->widget(\yii\jui\DatePicker::classname(),[
+		'dateFormat' => 'yyyy/dd/MM',
+		'value' => date('d/m/Y'),
+		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
+		])
+		?>
 
     <?= $form->field($model, 'NOMBREPACIENTE')->textInput(['maxlength' => true]) ?>
 

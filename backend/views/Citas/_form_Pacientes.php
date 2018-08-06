@@ -12,9 +12,10 @@ use yii\widgets\ActiveForm;
 
     
     <?php $form = ActiveForm::begin(); 
-
+   
     ?>
-
+<!--<input type="text" id="citas-nombrepaciente" class="form-control"
+       name="Citas[NOMBREPACIENTE]" value="" maxlength="100" aria-invalid="false">-->
 
    <?php
 
@@ -24,7 +25,7 @@ if ($model->ESTADO_CITA=='DISPONIBLE') {
 
 
    <?= $form->field($model, 'NOMBREPACIENTE')->textInput(['maxlength' => true]) ?>
-
+    
     <?= $form->field($model, 'CEDULA')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'TELEFONO')->textInput(['maxlength' => true]) ?>
@@ -43,12 +44,7 @@ if ($model->ESTADO_CITA=='DISPONIBLE') {
    
   ?>
    
-    <h1>
-        hola amigos 
-     <?php
-     $opcion
-         ?>
-    </h1>
+  
     
     <h1>Turno no disponible</h1>
           <h1>Por favor elija otro</h1>

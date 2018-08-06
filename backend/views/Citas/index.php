@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\search\CitasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Citas';
+$this->title = 'Agendar Citas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="citas-index">
