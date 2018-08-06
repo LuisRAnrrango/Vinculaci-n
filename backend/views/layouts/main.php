@@ -40,6 +40,7 @@ AppAsset::register($this);
         ['label' => 'Citas', 'url' => ['/citas/index']],
         ['label' => 'Medico', 'url' => ['/medico/index']],
         ['label' => 'Especialidad', 'url' => ['/catespecialidad/index']],
+        ['label' => 'Registrarse', 'url' => ['/site/logout']],
         
     ];
     if (Yii::$app->user->isGuest) {
