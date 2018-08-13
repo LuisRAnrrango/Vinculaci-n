@@ -13,14 +13,14 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="citas-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <center> <h1>Cruz Roja Ecuatoriana</h1></center> 
-    <center><h2>Sistema de reserva de citas médicas online</h2></center> 
+
     <p>
-        <?php
-           if(Yii::$app->user->can('index-medico')){
-               
-            ?>
-        <?= Html::a('Update', ['update', 'id' => $model->IDCITA], ['class' => 'btn btn-primary']) ?>
+<!--        
+ <?= Html::a('Update', ['update', 'id' => $model->IDCITA], ['class' => 'btn btn-primary']) ?>
+    
+-->
+    
+    
         <?= Html::a('Delete', ['delete', 'id' => $model->IDCITA], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -28,22 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-         </p>
-           <p>
-           <?php
-           
-           }
-           else{
-               
-              ?>
-   <a class="btn btn-success" href="javascript:window.print()">Imprimir</a>
-        
-        
-        
-            <?php  }
-            
-          ?>
-         
     </p>
 
     <?= DetailView::widget([
