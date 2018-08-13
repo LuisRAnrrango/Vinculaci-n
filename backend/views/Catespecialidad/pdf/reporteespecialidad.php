@@ -61,7 +61,7 @@ if (isset($_POST['create_pdf'])) {
     $content .= '
 		<div class="row padding">
         	<div class="col-md-12" style="text-align:center;">
-            	<span>Pdf Creator </span><a href="http://www.redecodifica.com">By Jhon Escobar</a>
+            	<span>Pdf Creator </span><a href="http://www.google.com">By Jhon Escobar</a>
             </div>
         </div>
     	

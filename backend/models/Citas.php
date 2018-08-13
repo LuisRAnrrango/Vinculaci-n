@@ -37,7 +37,12 @@ class Citas extends \yii\db\ActiveRecord
         return [
             [['IDESPECIALIDAD'], 'integer'],
             [['FECHACREACION', 'FECHACITA', 'HORA'], 'safe'],
-            [['NOMBREPACIENTE', 'CEDULA', 'TELEFONO', 'ESTADO_CITA'], 'string', 'max' => 100],
+            [['NOMBREPACIENTE',   'ESTADO_CITA'], 'string', 'max' => 100],
+           [['NOMBREPACIENTE'],'match','pattern'=>"/^[a-zA-ZÑñáéíóú ]+$/i",'message'=>'Solamente ingrese letras'],
+            [['CEDULA'], 'string', 'min' => 10,'max'=>10,'message'=>'Ingrese su cédula correctamente'],
+            [['CEDULA'],'match','pattern'=>"/^[0-9]+$/i",'message'=>'Ingrese su cédula correctamente'],
+            [['TELEFONO'], 'string', 'min' => 7,'max'=>14,'message'=>'Ingrese su número telefónico completo'],
+            [['TELEFONO'],'match','pattern'=>"/^[0-9]+$/i",'message'=>'Ingrese solo números'],
             [['IDESPECIALIDAD'], 'exist', 'skipOnError' => true, 'targetClass' => Catespecialidad::className(), 'targetAttribute' => ['IDESPECIALIDAD' => 'IDESPECIALIDAD']],
         ];
     }

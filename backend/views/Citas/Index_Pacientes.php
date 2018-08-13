@@ -100,7 +100,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
          
              'IDCITA',
-           'IDESPECIALIDAD',
+        //   'IDESPECIALIDAD',
          //   'FECHACREACION',
            // 'FECHACITA',
           //  'NOMBREPACIENTE',
@@ -111,7 +111,10 @@ $this->params['breadcrumbs'][] = $this->title;
          
             'HORA',
             'ESTADO_CITA',
-                     
+                                                   [
+                'attribute'=>'IDESPECIALIDAD',
+                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","3"=>"Fisioterapia")
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
               

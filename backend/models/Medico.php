@@ -30,8 +30,10 @@ class Medico extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['NOMBRES_MEDICO', 'APELLIDOS_MEDICO'], 'string', 'max' => 50],
-            [['TELEFONO_MEDICO'], 'string', 'max' => 10],
+            [['NOMBRES_MEDICO', 'APELLIDOS_MEDICO'], 'string', 'max' => 40,'min' => 9],
+           [['NOMBRES_MEDICO'],'match','pattern'=>"/^[a-zA-ZÑñáéíóú ]+$/i",'message'=>'Solamente ingrese letras'],
+           [['APELLIDOS_MEDICO'],'match','pattern'=>"/^[a-zA-ZÑñáéíóú ]+$/i",'message'=>'Solamente ingrese letras'],
+            [['TELEFONO_MEDICO'], 'integer', 'min' => 9,'message'=>'Solamente ingrese números'],
         ];
     }
 

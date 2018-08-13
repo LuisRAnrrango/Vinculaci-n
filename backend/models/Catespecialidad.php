@@ -33,7 +33,9 @@ class Catespecialidad extends \yii\db\ActiveRecord
         return [
             [['IDMEDICO'], 'required'],
             [['IDMEDICO'], 'integer'],
-            [['NOMBREESPECIALIDAD'], 'string', 'max' => 100],
+            [['NOMBREESPECIALIDAD'], 'string', 'max' => 40],
+            [['NOMBREESPECIALIDAD'],'match','pattern'=>"/^[a-zA-ZÑñáéíóú ]+$/i",'message'=>'Solamente ingrese letras'],
+
             [['IDMEDICO'], 'exist', 'skipOnError' => true, 'targetClass' => Medico::className(), 'targetAttribute' => ['IDMEDICO' => 'IDMEDICO']],
         ];
     }
