@@ -156,6 +156,7 @@ if (isset($_POST['create_pdf'])) {
                         <input type="hidden" name="reporte_name" value="<?php echo $h1; ?>">
                         <input type="submit" name="create_pdf" class="btn btn-danger pull-right" value="Generar PDF">
                     </form>
+                    <a href="http://localhost:81/final/backend/web/index.php?r=citas%2Findex"><button class="btn btn-info pull-right">Regresar</button></a>
                 </div>
             </div>
         </div>

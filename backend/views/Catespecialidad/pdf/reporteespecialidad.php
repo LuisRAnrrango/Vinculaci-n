@@ -31,6 +31,7 @@ if (isset($_POST['create_pdf'])) {
 <table border="1" cellpadding="5">
         <thead>
           <tr>
+           <th>IDESPECIALIDAD</th>
            <th>IDMEDICO</th>
             <th>NOMBREESPECIALIDAD</th>
           
@@ -132,7 +133,9 @@ echo '<h1>' . $h1 . '</h1>'
                     <form method="post">
                         <input type="hidden" name="reporte_name" value="<?php echo $h1; ?>">
                         <input type="submit" name="create_pdf" class="btn btn-danger pull-right" value="Generar PDF">
+                   
                     </form>
+                     <a href="http://localhost:81/final/backend/web/index.php?r=citas%2Findex"><button class="btn btn-info pull-right">Regresar</button></a>
                 </div>
             </div>
         </div>

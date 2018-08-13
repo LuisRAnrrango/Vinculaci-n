@@ -41,7 +41,7 @@ AppAsset::register($this);
         ['label' => 'Agendar Citas', 'url' => ['/citas/index']],
         ['label' => 'Medico', 'url' => ['/medico/index']],
         ['label' => 'Especialidad', 'url' => ['/catespecialidad/index']],
-        ['label' => 'Registrarse', 'url' => ['/site/logout']],      
+        
     ];
   }
       else if(Yii::$app->user->can('Index-citas')){

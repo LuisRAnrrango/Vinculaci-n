@@ -56,11 +56,31 @@ $this->params['breadcrumbs'][] = $this->title;
             <h5> 5 Oftalmología:  </h5>
             <br/>
           </tr>
+          
+          </td>
+          <td>
+          <tr>
+              
+          </tr>
+          <tr>
+              
+          </tr>
+          <tr>
+<!--          <img  src="images//backend/views/Citas/images/descarga.jpg"  />-->
+<!--          <img  src="images/descarga.jpg"  />-->
+          </tr>
+          <tr>
+              
+          </tr>
           </td>
       </table>
+        
       
 </div>
+ 
 </div>
+     <img  src="images/descarga.jpg"  /> 
+     <?= Html::img('images/descarga.jpg', ['alt' => 'My logo']) ?>
     <?php
     
   ?>
@@ -68,7 +88,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        
+        'rowOptions'=> function($model){
+         if ($model -> ESTADO_CITA !=='DISPONIBLE') {
+//                  GridView.Rows().Visible = True;            
+                    return['class' => 'danger'];
+                }
+ return['class' => 'success'];
+ 
+        }, 
+                
         'columns' => [
          
              'IDCITA',
@@ -117,8 +145,6 @@ $this->params['breadcrumbs'][] = $this->title;
 Pjax::end();
       ?>
     
-<!--    <h1>Hola No hay citas para esta especialidad</h1>-->
-     <?php
-//    }
-     ?>
+
+    
 </div>
