@@ -7,6 +7,8 @@ use backend\models\Medico;
 use backend\models\Citas;
 use yii\widgets\Pjax;
 
+
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\CitasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -68,6 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
           <tr>
 <!--          <img  src="images//backend/views/Citas/images/descarga.jpg"  />-->
 <!--          <img  src="images/descarga.jpg"  />-->
+               <img src="images/cruz-roja.png" alt=""/>
           </tr>
           <tr>
               
@@ -79,10 +82,14 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
  
 </div>
-     <img  src="images/descarga.jpg"  /> 
-     <?= Html::img('images/descarga.jpg', ['alt' => 'My logo']) ?>
-    <?php
-    
+   <img src="images/descarga.jpg"/>
+
+     <img src="'.Yii::app()->request->baseUrl.'/images/descarga.jpg">
+     
+   
+
+    <?php 
+ 
   ?>
     
     <?= GridView::widget([
@@ -99,10 +106,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 
         'columns' => [
          
-             'IDCITA',
+        //     'IDCITA',
         //   'IDESPECIALIDAD',
          //   'FECHACREACION',
-           // 'FECHACITA',
+            'FECHACITA',
           //  'NOMBREPACIENTE',
             //'CEDULA',
            // 'TELEFONO',
@@ -115,6 +122,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'IDESPECIALIDAD',
                 'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","4"=>"Fisioterapia","5"=>"Oftalmología")
             ],
+            
+                     
             [
                 ///---------
                 'class' => 'yii\grid\ActionColumn',
@@ -144,6 +153,9 @@ $this->params['breadcrumbs'][] = $this->title;
     
     <?php
 //}
+//1
+ 
+
 //else{
 Pjax::end();
       ?>

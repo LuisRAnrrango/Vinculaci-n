@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?=
 		$form-> field($model, 'FECHACREACION')->widget(\yii\jui\DatePicker::classname(),[
-		'dateFormat' => 'yyyy/dd/MM',
+		'dateFormat' => 'yyyy/MM/dd',
 		'value' => date('d/m/Y'),
 		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
 		])
@@ -24,7 +24,7 @@ use yii\widgets\ActiveForm;
 
      <?=
 		$form-> field($model, 'FECHACITA')->widget(\yii\jui\DatePicker::classname(),[
-		'dateFormat' => 'yyyy/dd/MM',
+		'dateFormat' => 'yyyy/MM/dd',
 		'value' => date('d/m/Y'),
 		'options' => ['style'=>'position: relative; z-index: 999','class'=>'form-conttrol']
 		])
