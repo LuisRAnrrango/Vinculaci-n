@@ -111,13 +111,13 @@ $this->params['breadcrumbs'][] = $this->title;
          
             'HORA',
             'ESTADO_CITA',
-                                                   [
+                [
                 'attribute'=>'IDESPECIALIDAD',
-                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","3"=>"Fisioterapia")
+                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","4"=>"Fisioterapia","5"=>"Oftalmología")
             ],
             [
+                ///---------
                 'class' => 'yii\grid\ActionColumn',
-              
             'template'=>'{update}',
                       'buttons' => [
                         'update' => function($url, $model) {
