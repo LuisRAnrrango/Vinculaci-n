@@ -31,7 +31,14 @@ if ($model->ESTADO_CITA=='DISPONIBLE') {
     <?= $form->field($model, 'TELEFONO')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'HORA')->textInput() ?>
-
+    
+<!--    
+    <?=
+		$form->field($model,'HORA')->widget(kartik\time\TimePicker::className(),[
+		'pluginOptions' => ['minuteStep'=>5]
+		])
+    ?>
+    -->
   <?= $form->field($model, 'ESTADO_CITA')->dropDownList(['PENDIENTE'=>'PENDIENTE']) ?>
 
     <div class="form-group">

@@ -45,28 +45,10 @@ $this->params['breadcrumbs'][] = $this->title;
           </tr>
         
           <tr>
-          <h4> Elija las siguientes opciones segun número de Especialidad  </h4>
+          <h4> Debe seleccionar una especialidad</h4>
           </tr>
           <br/>
-            <tr>
-            <h5> 1 :Odontología  </h5>
-           
-            <h5> 2 : Medicina General </h5>
-          
-            <h5> 4 Fisioterapia :  </h5>
-         
-            <h5> 5 Oftalmología:  </h5>
-            <br/>
-          </tr>
-          
-          </td>
-          <td>
-          <tr>
-              
-          </tr>
-          <tr>
-              
-          </tr>
+ 
           <tr>
 <!--          <img  src="images//backend/views/Citas/images/descarga.jpg"  />-->
 <!--          <img  src="images/descarga.jpg"  />-->
@@ -106,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 
         'columns' => [
          
-        //     'IDCITA',
+//             'IDCITA',
         //   'IDESPECIALIDAD',
          //   'FECHACREACION',
             'FECHACITA',
@@ -117,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'ESTADO_CITA',
          
             'HORA',
-            'ESTADO_CITA',
+//            'ESTADO_CITA',
                 [
                 'attribute'=>'IDESPECIALIDAD',
                 'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","4"=>"Fisioterapia","5"=>"Oftalmología")

@@ -242,7 +242,5 @@ if (isset($_POST['create_pdf2'])) {
                 </div>
             </div>
         </div>
-        <img src="../portada.png" alt=""/>
-        <img src="../../../../../../../Users/JHON LENIN/Downloads/portada.png" alt=""/>
     </body>
 </html>

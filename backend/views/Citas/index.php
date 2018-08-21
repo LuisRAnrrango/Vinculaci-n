@@ -24,19 +24,38 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'rowOptions'=> function($model){
+         if ($model -> ESTADO_CITA =='PENDIENTE') {
+//                  GridView.Rows().Visible = True;            
+                    return['class' => 'warning'];
+                }else  if ($model -> ESTADO_CITA =='DISPONIBLE') {
+//                  GridView.Rows().Visible = True;            
+                    return['class' => 'success'];
+                }
+ return['class' => 'danger'];
+ 
+        }, 
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'IDCITA',
-            'IDESPECIALIDAD',
-            'FECHACREACION',
+//            'IDESPECIALIDAD',
+            [
+                'attribute'=>'IDESPECIALIDAD',
+                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","4"=>"Fisioterapia","5"=>"Oftalmología")
+            ],
+            //'FECHACREACION',
             'FECHACITA',
+            'HORA',
             'NOMBREPACIENTE',
             'CEDULA',
             'TELEFONO',
-            'HORA',
-            'ESTADO_CITA',
-
+            
+//            'ESTADO_CITA',
+[
+                'attribute'=>'ESTADO_CITA',
+                'filter'=>array( "DISPONIBLE"=>"DISPONIBLE","PENDIENTE"=>"PENDIENTE","APROBADO"=>"APROBADO")
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
