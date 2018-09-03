@@ -28,6 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+                <a href="http://localhost:81/Vinculaci-n/backend/web/index.php?r=citas%2Findex"><button class="btn-danger">Inicio</button></a>
+
          </p>
            <p>
            <?php

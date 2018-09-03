@@ -8,6 +8,7 @@ use backend\models\search\CitasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * CitasController implements the CRUD actions for Citas model.
@@ -33,6 +34,10 @@ class CitasController extends Controller
      * Lists all Citas models.
      * @return mixed
      */
+        public function actionInicio()
+    {
+        return $this->render("inicio");
+    }
     public function actionIndex()
     {
         

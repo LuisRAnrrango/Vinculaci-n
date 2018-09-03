@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Catespecialidad */
 
-$this->title = 'Create Catespecialidad';
+$this->title = 'Crear Especialidad';
 $this->params['breadcrumbs'][] = ['label' => 'Catespecialidads', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Citas */
 
-$this->title = 'Actualizar Cita: ' . $model->IDCITA;
+$this->title = 'Registro de Datos: ' ;
 $this->params['breadcrumbs'][] = ['label' => 'Citas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->IDCITA, 'url' => ['view', 'id' => $model->IDCITA]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Registro';
 ?>
 <div class="citas-update">
 

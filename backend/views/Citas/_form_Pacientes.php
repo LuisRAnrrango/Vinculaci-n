@@ -24,25 +24,19 @@ if ($model->ESTADO_CITA=='DISPONIBLE') {
     ?>
 
 
-   <?= $form->field($model, 'NOMBREPACIENTE')->textInput(['maxlength' => true]) ?>
-    
-    <?= $form->field($model, 'CEDULA')->textInput(['maxlength' => true]) ?>
+   <?= $form->field($model, 'NOMBREPACIENTE')->textInput(['minlength' => 8])->hint('Ingrese su nombre completo') ?>
 
-    <?= $form->field($model, 'TELEFONO')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'HORA')->textInput() ?>
     
-<!--    
-    <?=
-		$form->field($model,'HORA')->widget(kartik\time\TimePicker::className(),[
-		'pluginOptions' => ['minuteStep'=>5]
-		])
-    ?>
-    -->
+    <?= $form->field($model, 'CEDULA')->textInput(['maxlength' => true])->hint('Ingrese su número de cédula correctamente') ?>
+
+    <?= $form->field($model, 'TELEFONO')->textInput(['maxlength' => true])->hint('Ingrese su número telefónico de contacto') ?>
+
   <?= $form->field($model, 'ESTADO_CITA')->dropDownList(['PENDIENTE'=>'PENDIENTE']) ?>
 
+            <a href="http://localhost:81/Vinculaci-n/backend/web/index.php?r=citas%2Findex"><button class="btn-danger">Cancelar</button></a>
+            <p>
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Reservar', ['class' => 'btn btn-success  btn-xs']) ?>
     </div>   
 
     <?php ActiveForm::end(); ?>
@@ -55,7 +49,7 @@ if ($model->ESTADO_CITA=='DISPONIBLE') {
     
     <h1>Turno no disponible</h1>
           <h1>Por favor elija otro</h1>
-            <a href="http://localhost:81/final/backend/web/index.php?r=citas%2Findex"><button class="btn-danger">Regresar</button></a>
+            <a href="http://localhost:81/Vinculaci-n/backend/web/index.php?r=citas%2Findex"><button class="btn-danger">Regresar</button></a>
 
 <?php
 }

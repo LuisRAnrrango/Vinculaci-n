@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Crear Especialidad', ['create'], ['class' => 'btn btn-success']) ?>
-         <a href="http://localhost:81/final/backend/views/Catespecialidad/pdf/reporteespecialidad.php"><button class="btn btn-info pull-right">Reporte</button></a>
+         <a href="http://localhost:81/Vinculaci-n/backend/views/Catespecialidad/pdf/reporteespecialidad.php"><button class="btn btn-info pull-right">Reporte</button></a>
     </p>
 
     <?= GridView::widget([

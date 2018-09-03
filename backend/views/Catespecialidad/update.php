@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Catespecialidad */
 
-$this->title = 'Update Catespecialidad: ' . $model->IDESPECIALIDAD;
+$this->title = 'Actualizar Especialidad: ' . $model->IDESPECIALIDAD;
 $this->params['breadcrumbs'][] = ['label' => 'Catespecialidads', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->IDESPECIALIDAD, 'url' => ['view', 'id' => $model->IDESPECIALIDAD]];
 $this->params['breadcrumbs'][] = 'Update';

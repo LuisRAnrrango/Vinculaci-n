@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\CitasSearch */
@@ -18,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Crear Citas', ['create'], ['class' => 'btn btn-success']) ?>
       
-        <a href="http://localhost:81/final/backend/views/Catespecialidad/pdf/reportecitas.php"><button class="btn btn-info pull-right">Reporte</button></a>
+        <a href="http://localhost:81/Vinculaci-n/backend/views/Catespecialidad/pdf/reporteCITAS.php"><button class="btn btn-info pull-right">Reportes</button></a>
     </p>
 
     <?= GridView::widget([
@@ -38,14 +39,28 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'IDCITA',
+//            'IDCITA',
 //            'IDESPECIALIDAD',
             [
                 'attribute'=>'IDESPECIALIDAD',
-                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","4"=>"Fisioterapia","5"=>"Oftalmología")
+                'filter'=>array( "1"=>"Odontología","2"=>"Medicina General","3"=>"Ginecología","4"=>"Fisioterapia","5"=>"Oftalmología")
             ],
             //'FECHACREACION',
-            'FECHACITA',
+//            'FECHACITA',
+                        [
+                    'attribute'=>'FECHACITA',
+                    'value'=>'FECHACITA',
+                    'format'=>'raw',
+                    'filter'=>DatePicker::widget([
+    'model' => $searchModel,
+    'attribute' => 'FECHACITA',
+    'template' => '{addon}{input}',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+                          ]
+])
+                ],
             'HORA',
             'NOMBREPACIENTE',
             'CEDULA',

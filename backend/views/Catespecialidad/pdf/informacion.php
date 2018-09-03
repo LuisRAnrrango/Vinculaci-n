@@ -14,6 +14,7 @@
     </head>
 
     <body style="background-color:#FBF3F1;">
+        <div class="citas-index">
         <div class="container-fluid">
             <div class="row padding">
                 <div class="col-md-12">
@@ -26,6 +27,7 @@
                <img src="../portada.png" width="1000" height="500" aling="center"/>  
                </center>
             </div> 
-        </div>    
+        </div> 
+            </div>
     </body>
 </html>

@@ -38,6 +38,7 @@ class Citas extends \yii\db\ActiveRecord
             [['IDESPECIALIDAD'], 'integer'],
             [['FECHACREACION', 'FECHACITA', 'HORA'], 'safe'],
             [['NOMBREPACIENTE',   'ESTADO_CITA'], 'string', 'max' => 100],
+//            [['NOMBREPACIENTE'],'required','message'=>'Campo requerido'],
            [['NOMBREPACIENTE'],'match','pattern'=>"/^[a-zA-ZÑñáéíóú ]+$/i",'message'=>'Solamente ingrese letras'],
             [['CEDULA'], 'string', 'min' => 10,'max'=>10,'message'=>'Ingrese su cédula correctamente'],
             [['CEDULA'],'match','pattern'=>"/^[0-9]+$/i",'message'=>'Ingrese su cédula correctamente'],

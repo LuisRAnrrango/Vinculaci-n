@@ -54,7 +54,7 @@ AppAsset::register($this);
       
   else{
       $menuItems = [
-        ['label' => 'Menu Principal', 'url' => ['site/index']],
+        ['label' => 'Menu Principal', 'url' => ['citas/inicio']],
         ['label' => 'Agendar Citas', 'url' => ['/citas/index']],
     ];
   }

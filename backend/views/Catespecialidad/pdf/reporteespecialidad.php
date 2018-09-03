@@ -80,7 +80,7 @@ if (isset($_POST['create_pdf'])) {
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Exportar a PDF - Escobar Jhon</title>
+        <title>Exportar a PDF</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
         <!-- Meta Mobil
